@@ -1,0 +1,72 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo y configuración general del cuerpo */
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    font-size: 2rem;
+    color: #2c6e2e;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabecera de la tabla */
+thead {
+    background-color: #2c6e2e;
+    color: #fff;
+}
+
+/* Estilo para las celdas de la tabla */
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Fila de la tabla cuando pasa el mouse */
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para el botón de volver a inicio */
+.volver-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #2c6e2e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto de hover en el botón */
+.volver-btn:hover {
+    background-color: #2c6e2e;
+    transform: scale(1.05);
+}
+
+
+

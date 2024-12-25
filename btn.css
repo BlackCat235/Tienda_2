@@ -1,0 +1,10 @@
+.eliminar-btn {
+    color: rgb(46, 40, 40);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.eliminar-btn:hover {
+    text-decoration: none;
+    color: red;
+}

@@ -1,0 +1,164 @@
+/* Reset de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+/* Estilo para el contenedor de la sección */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.container-2 {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;    
+}
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Medios de comunicación (responsive) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Contenedor principal */
+.container-2 {
+    width: 100%;
+    max-width: 600px; /* Limita el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para la lista */
+.container-2 ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+}
+
+/* Estilo para cada elemento de la lista */
+.container-2 li {
+    margin-bottom: 15px; /* Espacio entre los enlaces */
+}
+
+/* Estilo para los enlaces */
+.container-2 a {
+    display: inline-block;
+    padding: 15px 20px; /* Aumentamos el padding para igualar el alto */
+    background-color: #388E3C; /* Fondo verde más oscuro */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    width: 100%; /* Los botones ocupan todo el ancho del contenedor */
+    max-width: 200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra los botones */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efecto al pasar el mouse */
+}
+
+/* Estilo cuando el mouse pasa sobre el enlace */
+.container-2 a:hover {
+    background-color: #2c6e2e; /* Fondo verde más oscuro */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Estilo cuando el enlace es el primero en la lista */
+.container-2 a:first-child {
+    margin-top: 0; /* Elimina el margen superior en el primer enlace */
+}
+

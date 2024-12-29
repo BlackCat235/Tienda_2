@@ -13,27 +13,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $cliente = $stmt->fetch();
 
     if (!$cliente) {
-<<<<<<< HEAD
         echo '<div class="error-message">Cliente no encontrado.</div>';
         exit;  // Detenemos la ejecución si el cliente no existe
     }
 
     // Obtener el precio del producto y la cantidad disponible usando 'id_productos'
     $sql = "SELECT id_productos, nombre, descripcion, precio, cantidad_disponible FROM productos WHERE id_productos = ?";
-=======
-        echo '<div class="success-message">Cliente no encontrado.</div>';
-        exit;  // Detenemos la ejecución si el cliente no existe
-    }
-
-    // Obtener el precio del producto usando 'id_productos'
-    $sql = "SELECT precio FROM productos WHERE id_productos = ?";
->>>>>>> parent of 69c1049 (Cambioes para realizar compras)
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$producto_id]);
     $producto = $stmt->fetch();
 
     if (!$producto) {
-<<<<<<< HEAD
         echo '<div class="error-message">Producto no encontrado.</div>';
         exit;  // Detenemos la ejecución si el producto no existe
     }
@@ -42,10 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($producto['cantidad_disponible'] < $cantidad) {
         echo '<div class="error-message">No hay suficiente cantidad disponible para realizar la compra.</div>';
         exit;
-=======
-        echo '<div class="success-message">Producto no encontrado.</div>';
-        exit;  // Detenemos la ejecución si el producto no existe
->>>>>>> parent of 69c1049 (Cambioes para realizar compras)
     }
 
     $precio_total = $producto['precio'] * $cantidad;
@@ -55,14 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$cliente_id, $producto_id, $cantidad, $precio_total]);
 
-<<<<<<< HEAD
     // Actualizar la cantidad disponible del producto
     $sql_update = "UPDATE productos SET cantidad_disponible = cantidad_disponible - ? WHERE id_productos = ?";
     $stmt_update = $pdo->prepare($sql_update);
     $stmt_update->execute([$cantidad, $producto_id]);
 
-=======
->>>>>>> parent of 69c1049 (Cambios para realizar compras)
     echo '<div class="success-message">Compra realizada con éxito!</div>';
 }
 ?>
